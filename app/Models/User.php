@@ -17,7 +17,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'lname',
+        'fname',
         'email',
         'password',
     ];
@@ -44,4 +45,25 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function roles()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function jewelries()
+    {
+        return $this->belongsToMany(Jewelry::class);
+    }
+
+    public function orders()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function carts()
+    {
+        return $this->belongsTo(Cart::class);
+    }
+
 }
