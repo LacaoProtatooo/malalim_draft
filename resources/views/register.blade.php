@@ -13,13 +13,13 @@
 </head>
 <body class="font-sans">
     @include('common.header')
-    <div class="text-black min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div class="text-black bg-gray-100 min-h-screen flex flex-col items-center justify-center ">
         <div class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md bg-white shadow-2xl">
             <div class="md:max-w-md w-full sm:px-6 py-4">
                 <form>
                     <div class="mb-12">
                         <h3 class="text-3xl font-bold">Sign in</h3>
-                        <p class="text-sm mt-4">Don't have an account <a href="{{route('register')}}" class="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
+                        <p class="text-sm mt-4">Don't have an account <a href="{{route('login')}}" class="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Have an account already?</a></p>
                     </div>
                     <div>
                         <label class="text-xs block mb-2">Email</label>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="mt-12">
-                        <button type="submit" class="w-full shadow-xl py-2.5 px-4 text-sm font-semibold bg-yellow-300 rounded-full hover:bg-yellow-500 hover:text-white focus:outline-none">
+                        <button type="submit" class="w-full shadow-xl py-2.5 px-4 text-sm font-semibold bg-yellow-300 rounded-full  hover:bg-yellow-500 hover:text-white focus:outline-none">
                             Sign in
                         </button>
                     </div>
@@ -59,7 +59,6 @@
         </div>
     </div>
 <div class="!bg-white">
-    @include('common.footer')
 </div>
 </body>
 </html>

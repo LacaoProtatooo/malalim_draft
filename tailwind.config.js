@@ -25,8 +25,12 @@ export default {
   },
   plugins: [
     require('daisyui'),
+    function ({ addBase }) {
+      addBase({
+        'body': { '@apply bg-white': {} },
+      });
+    }
   ],
   daisyui: {
     themes: ["bumblebee"],
   },
-}
